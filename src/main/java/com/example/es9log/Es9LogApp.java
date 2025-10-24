@@ -34,7 +34,6 @@ public class Es9LogApp implements CommandLineRunner {
 
     private void causeError2() {
         Object x = null;
-// [auto-fix-proto] demo-es9 | com.example.es9log.Es9LogApp | ERROR | 2025-10-24T11:53:26.798+0900 | Intentional error for ES logging demod
         x.toString(); // NPE
     }
 }
