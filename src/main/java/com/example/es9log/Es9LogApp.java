@@ -26,13 +26,15 @@ public class Es9LogApp implements CommandLineRunner {
     @Scheduled(fixedDelay = 5000L)
     public void generateErrorLog() {
         try {
-            causeError2();
+//            causeError2();
+            new Exception().printStackTrace();
         } catch (Exception e) {
             log.error("Intentional error for ES logging demod", e);
         }
     }
 
     private void causeError2() {
+// [auto-fix-proto] demo-es9 | com.example.es9log.Es9LogApp | ERROR | 2025-10-24T11:55:44.011+0900 | Intentional error for ES logging demod
         Object x = null;
         x.toString(); // NPE
     }
