@@ -26,8 +26,9 @@ public class Es9LogApp implements CommandLineRunner {
     @Scheduled(fixedDelay = 5000L)
     public void generateErrorLog() {
         try {
-//            causeError2();
-            new Exception().printStackTrace();
+
+            new Exception();
+
         } catch (Exception e) {
             log.error("Intentional error for ES logging demod", e);
         }
